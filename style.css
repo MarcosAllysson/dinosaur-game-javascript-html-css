@@ -1,0 +1,83 @@
+body {
+    background-color: #666666;
+}
+
+.game{
+    width: 600px;
+    height: 200px;
+    background-image: url(/img/background.png);
+    background-repeat: repeat-x; /*repetir de maneira infinita*/
+    animation: slideright 300s infinite linear; /*fundo desliza pra direita com velocidade de 600ms*/
+    border: 1px solid black;
+    margin: auto;
+}
+
+/* keyframes -> define etapas da animação */
+@keyframes slideright{ /* deslizar pra direita */
+    from {
+        background-position: 70000%; /*na esquerda*/
+    } to {
+        background-position: 0; /*desliza pra direita de forma animada*/
+    }
+}
+
+#dino{
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/dino.png);
+    background-size: 50px 50px;
+
+    position: relative;
+    top: 150px;
+}
+
+.jump{
+    animation: jump 0.3s linear ;
+}
+
+@keyframes jump{
+    0%{
+        top: 150px;
+    }
+    30%{
+        top: 130px;
+    }
+    50%{
+        top: 80px;
+    }
+    80%{
+        top: 130px;
+    }
+    100%{
+        top: 150px;
+    }
+}
+
+.game-over{
+    text-align: center;
+    color: white;
+    margin: 50px 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cactus{
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+
+    background-image: url(/img/cactus.png);
+    background-size: 20px 40px;
+
+    animation: block 1s infinite linear;
+}
+
+@keyframes block{
+    0%{
+        left: 580px;
+    }
+    100%{
+        left: -10px;
+    }
+}
